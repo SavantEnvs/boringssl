@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: ocsp_parse_ocsp_single_response_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ocsp_parse_ocsp_single_response_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/out/ocsp_parse_ocsp_single_response_fuzzer
+    libfuzzer: true
+    timeout: 15

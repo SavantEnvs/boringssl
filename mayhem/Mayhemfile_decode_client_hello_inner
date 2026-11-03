@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: decode_client_hello_inner
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/decode_client_hello_inner/testsuite
+cmds:
+  - cmd: /mayhem/out/decode_client_hello_inner
+    libfuzzer: true
+    timeout: 15

@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: read_pem
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/read_pem/testsuite
+cmds:
+  - cmd: /mayhem/out/read_pem
+    libfuzzer: true
+    timeout: 15

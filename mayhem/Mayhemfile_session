@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: session
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/session/testsuite
+cmds:
+  - cmd: /mayhem/out/session
+    libfuzzer: true
+    timeout: 15

@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: ssl_ctx_api
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ssl_ctx_api/testsuite
+cmds:
+  - cmd: /mayhem/out/ssl_ctx_api
+    libfuzzer: true
+    timeout: 15

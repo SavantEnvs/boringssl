@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: dtls_server
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dtls_server/testsuite
+cmds:
+  - cmd: /mayhem/out/dtls_server
+    libfuzzer: true
+    timeout: 15

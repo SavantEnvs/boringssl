@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: pkcs8
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pkcs8/testsuite
+cmds:
+  - cmd: /mayhem/out/pkcs8
+    libfuzzer: true
+    timeout: 15
