@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: client_no_fuzzer_mode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/client_no_fuzzer_mode/testsuite
+cmds:
+  - cmd: /mayhem/out/client_no_fuzzer_mode
+    libfuzzer: true
+    timeout: 15

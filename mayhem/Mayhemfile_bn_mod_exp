@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: bn_mod_exp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bn_mod_exp/testsuite
+cmds:
+  - cmd: /mayhem/out/bn_mod_exp
+    libfuzzer: true
+    timeout: 15

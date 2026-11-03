@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: crl_parse_issuing_distribution_point_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/crl_parse_issuing_distribution_point_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/out/crl_parse_issuing_distribution_point_fuzzer
+    libfuzzer: true
+    timeout: 15

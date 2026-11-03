@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: der_roundtrip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/der_roundtrip/testsuite
+cmds:
+  - cmd: /mayhem/out/der_roundtrip
+    libfuzzer: true
+    timeout: 15

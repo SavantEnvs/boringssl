@@ -1,0 +1,6 @@
+project: savantenvs/boringssl
+target: fuzz_certs
+cmds:
+  - cmd: /mayhem/out/fuzz_certs
+    libfuzzer: true
+    timeout: 15

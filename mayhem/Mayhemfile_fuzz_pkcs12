@@ -1,0 +1,6 @@
+project: savantenvs/boringssl
+target: fuzz_pkcs12
+cmds:
+  - cmd: /mayhem/out/fuzz_pkcs12
+    libfuzzer: true
+    timeout: 15

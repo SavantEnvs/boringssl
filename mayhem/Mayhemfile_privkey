@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: privkey
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/privkey/testsuite
+cmds:
+  - cmd: /mayhem/out/privkey
+    libfuzzer: true
+    timeout: 15

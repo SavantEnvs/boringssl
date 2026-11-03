@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: parse_certificate_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parse_certificate_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/out/parse_certificate_fuzzer
+    libfuzzer: true
+    timeout: 15

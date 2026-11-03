@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: arm_cpuinfo
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/arm_cpuinfo/testsuite
+cmds:
+  - cmd: /mayhem/out/arm_cpuinfo
+    libfuzzer: true
+    timeout: 15

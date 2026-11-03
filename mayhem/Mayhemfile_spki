@@ -1,0 +1,9 @@
+project: savantenvs/boringssl
+target: spki
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/spki/testsuite
+cmds:
+  - cmd: /mayhem/out/spki
+    libfuzzer: true
+    timeout: 15
